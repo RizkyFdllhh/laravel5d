@@ -7,7 +7,7 @@
 
 ## 1. Entity Relationship Diagram
 
-![ERD MySphere](./images/P01-erd.png)
+
 
 ```mermaid
 erDiagram
