@@ -7,8 +7,6 @@
 
 ## 1. Entity Relationship Diagram
 
-
-
 ```mermaid
 erDiagram
     USERS ||--o{ ACCOUNTS : "owns"
@@ -163,25 +161,27 @@ erDiagram
 
 ## 2. Relationship Summary
 
-| Tipe Relasi | Dari | Ke | Keterangan |
-|---|---|---|---|
-| One-to-Many | User | Account | Satu user punya banyak akun |
-| One-to-Many | User | Transaction | Satu user punya banyak transaksi |
-| One-to-Many | User | Category | Satu user punya banyak kategori |
-| One-to-Many | User | Budget | Satu user punya banyak anggaran |
-| One-to-Many | User | Financial Goal | Satu user punya banyak target finansial |
-| One-to-Many | User | Asset | Satu user punya banyak aset |
-| One-to-Many | User | Debt | Satu user punya banyak utang/piutang |
-| One-to-Many | User | Habit | Satu user punya banyak kebiasaan |
-| One-to-Many | User | Journal | Satu user punya banyak jurnal |
-| One-to-Many | User | Recurring Transaction | Satu user punya banyak transaksi berulang |
-| One-to-Many | Account | Transaction | Satu akun dipakai di banyak transaksi |
-| One-to-Many | Account | Debt Payment | Satu akun dipakai untuk banyak pembayaran utang |
-| One-to-Many | Category | Transaction | Satu kategori untuk banyak transaksi |
-| One-to-Many | Category | Budget | Satu kategori punya banyak anggaran |
-| One-to-Many | Asset | Asset Transaction | Satu aset punya banyak riwayat transaksi |
-| One-to-Many | Debt | Debt Payment | Satu utang punya banyak pembayaran |
-| One-to-Many | Habit | Habit Log | Satu kebiasaan punya banyak log harian |
+| Jenis | Relasi | Eloquent |
+| --- | --- | --- |
+| One-to-Many | `User` → `Account` | `hasMany` / `belongsTo` |
+| One-to-Many | `User` → `Transaction` | `hasMany` / `belongsTo` |
+| One-to-Many | `User` → `Category` | `hasMany` / `belongsTo` |
+| One-to-Many | `User` → `Budget` | `hasMany` / `belongsTo` |
+| One-to-Many | `User` → `FinancialGoal` | `hasMany` / `belongsTo` |
+| One-to-Many | `User` → `Asset` | `hasMany` / `belongsTo` |
+| One-to-Many | `User` → `Debt` | `hasMany` / `belongsTo` |
+| One-to-Many | `User` → `Habit` | `hasMany` / `belongsTo` |
+| One-to-Many | `User` → `Journal` | `hasMany` / `belongsTo` |
+| One-to-Many | `User` → `RecurringTransaction` | `hasMany` / `belongsTo` |
+| One-to-Many | `Account` → `Transaction` | `hasMany` / `belongsTo` |
+| One-to-Many | `Account` → `DebtPayment` | `hasMany` / `belongsTo` |
+| One-to-Many | `Account` → `RecurringTransaction` | `hasMany` / `belongsTo` |
+| One-to-Many | `Category` → `Transaction` | `hasMany` / `belongsTo` |
+| One-to-Many | `Category` → `Budget` | `hasMany` / `belongsTo` |
+| One-to-Many | `Category` → `RecurringTransaction` | `hasMany` / `belongsTo` |
+| One-to-Many | `Asset` → `AssetTransaction` | `hasMany` / `belongsTo` |
+| One-to-Many | `Debt` → `DebtPayment` | `hasMany` / `belongsTo` |
+| One-to-Many | `Habit` → `HabitLog` | `hasMany` / `belongsTo` |
 
 ---
 
